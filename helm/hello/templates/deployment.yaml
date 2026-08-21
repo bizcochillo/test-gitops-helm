@@ -40,9 +40,9 @@ spec:
           {{- end }}
           image: "{{ .Values.image.repository }}" 
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          #env: 
-          #  - name: RESPONSE
-          #    value: {{ .Values.response }}
+          env: 
+            - name: RESPONSE
+              value: {{ .Values.response }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
